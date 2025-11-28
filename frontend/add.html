@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>FaceID Web - Add new user</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-brand">FaceID Demo</div>
+    <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="add.html" class="nav-link active">Add new user</a></li>
+        <li><a href="camera.html" class="nav-link">Camera</a></li>
+    </ul>
+</nav>
+
+<main class="main-container">
+    <section class="page">
+        <div class="card">
+            <h2>Add new user</h2>
+        
+            <form id="add-user-form" class="add-form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="full-name">Name</label>
+                    <input type="text" id="full-name" name="full_name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Face capture</label>
+
+                    <div class="capture-camera-wrapper">
+                        <video id="capture-video" autoplay playsinline></video>
+                        <canvas id="capture-canvas"></canvas>
+                    </div>
+
+
+                    <div class="capture-controls">
+                        <button type="button" id="start-capture-camera" class="primary-btn">
+                            Turn on camera
+                        </button>
+
+                        <button type="button" id="capture-shot-1" class="secondary-btn" disabled>
+                            Take photo 1
+                        </button>
+
+                        <button type="button" id="capture-shot-2" class="secondary-btn" disabled>
+                            Take photo 2
+                        </button>
+                    </div>
+
+                    <div class="capture-preview">
+                        <div class="preview-item">
+                            <span>Photo 1:</span>
+                            <img id="preview-shot-1" />
+                        </div>
+                        <div class="preview-item">
+                            <span>Photo 2:</span>
+                            <img id="preview-shot-2" />
+                        </div>
+                    </div>
+
+                    <small>
+                        Turn on the camera, then take 2 clear photos of your face (you can change the angle / lighting).
+                    </small>
+                </div>
+
+                <button type="submit" class="primary-btn">Save to database</button>
+                <p id="add-user-status" class="form-status"></p>
+            </form>
+
+        </div>
+    </section>
+</main>
+
+<script src="js/add-user.js"></script>
+</body>
+</html>

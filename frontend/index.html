@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>FaceID Web - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-brand">FaceID Demo</div>
+    <ul class="nav-links">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="add.html" class="nav-link">Add new user</a></li>
+        <li><a href="camera.html" class="nav-link">Camera</a></li>
+    </ul>
+</nav>
+
+<main class="home-main">
+    <section class="home-hero">
+        <div class="home-hero-inner">
+            <div class="home-hero-left">
+                <img
+                    src="../dev/tests/data/Face_ID.jpg"
+                    alt="FaceID illustration"
+                    class="home-hero-image"
+                />
+            </div>
+
+            <div class="home-hero-right">
+                <h1 class="home-title">AI-Powered Real‑time FaceID</h1>
+                <p class="home-subtitle">
+                    A hybrid biometric system combining <strong>MediaPipe</strong> for ultra-fast detection, <strong>SCRFD</strong> for precise alignment, and the powerful <strong>ArcFace R100</strong> for deep feature extraction.
+                </p>
+
+                <ul class="home-features">
+                    <li>
+                        <strong>Hybrid Pipeline:</strong> Real-time detection via MediaPipe followed by SCRFD-based geometric alignment.
+                    </li>
+                    <li>
+                        <strong>Industrial Accuracy:</strong> Powered by the <strong>ArcFace (ResNet100)</strong> backbone trained on the MS1MV3 dataset.
+                    </li>
+                    <li>
+                        <strong>Vector Search Engine:</strong> Lightning-fast identity matching via 512-dimensional embeddings in <strong>Qdrant</strong>.
+                    </li>
+                </ul>
+
+                <div class="home-actions">
+                    <a href="camera.html" class="primary-btn">Launch Live Demo</a>
+                    <a href="add.html" class="secondary-btn">Enroll New User</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>
+
+
+
+
