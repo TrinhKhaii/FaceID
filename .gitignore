@@ -21,7 +21,7 @@ models/
 desktop.ini
 
 *.jpg
-*.png
+*.JPG
 
 .env
 
